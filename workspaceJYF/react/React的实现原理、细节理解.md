@@ -7,3 +7,4 @@
     * [React Fiber是什么](https://zhuanlan.zhihu.com/p/26027085)
 * 合成事件
 
+总结性文章：https://segmentfault.com/a/1190000017140200
