@@ -55,3 +55,7 @@ React Fiber 一个更新过程被分为两个阶段(Phase)
 2. React 以队列的方式，从触发事件的组件向父组件回溯，调用它们在 JSX 中声明的 callback。也就是 React 自身实现了一套事件冒泡机制。我们没办法用 event.stopPropagation()来停止事件传播，应该使用 event.preventDefault()
 3. React 有一套自己的合成事件 SyntheticEvent，不同类型的事件会构造不同的 SyntheticEvent
 4. React 使用对象池来管理合成事件对象的创建和销毁，这样减少了垃圾的生成和新对象内存的分配，大大提高了性能
+
+## React 优化
+
+https://zhuanlan.zhihu.com/p/142586376
