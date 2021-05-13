@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <button onclick="requestFullScreen()">全屏</button>
+    <div>浏览器高度：<span id="height"></span></div>
+    <div>浏览器宽度：<span id="width"></span></div>
+    <script>
+      function requestFullScreen() {
+        var de = document.documentElement;
+        de.requestFullscreen().then(() => {
+          printWidthHeight();
+        });
+      }
+      function printWidthHeight() {
+        var showHeight = document.getElementById("height");
+        showHeight.innerText = `${document.body.clientHeight}/${window.screen.height}`;
+        var showWidth = document.getElementById("width");
+        showWidth.innerText = `${document.body.clientWidth}/${window.screen.width}`;
+      }
+      window.onload = printWidthHeight;
+      window.addEventListener("resize", printWidthHeight);
+    </script>
+  </body>
+</html>
